@@ -1,66 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Foster understanding and promote inclusive digital experiences for all">
-    <meta name="author" content="">
-    <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Custom styles for Empower Ability Labs -->
-    <link rel="stylesheet" href="EmpowerAbilityLab.css"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Community Events & Booking by Empower Ability Labs">
+  <meta name="author" content="">
+  <title>Home - Empower Ability Labs</title>
 
-  </head>
+  <!-- Bootstrap CSS only -->
+  <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  >
 
-  <body>
-<div  class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="https://www.google.ca/">Empower Ability Labs Logo here</a>
-    <!-- Main Navigation for Empower Ability Labs-->
-    <nav> 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="EmpowerAbilityLab.css">
+</head>
 
-      </div>
-    </nav>
-  </div>
-    <main>
-      <!-- Main landing view -->
-      <div class="jumbotron">
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <!-- ===================== -->
+    <!-- Person 1: Navigation -->
+    <!-- ===================== -->
+    <div class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#home" data-page="home">Empower Ability Labs</a>
+
+      <nav aria-label="Main navigation" class="ml-auto">
+        <button
+          class="nav-toggle d-md-none"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation"
+          id="navToggleBtn"
+        >
+          Menu
+        </button>
+
+        <div class="nav-wrapper" id="primary-nav">
+          <ul class="navbar-nav mr-auto custom-nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="#home" data-page="home" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services" data-page="services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" data-page="contact">Schedule a Call</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ===================== -->
+    <!-- Person 2: Home -->
+    <!-- ===================== -->
+    <section id="home" tabindex="-1" class="page-section">
+      <div class="jumbotron hero-section">
         <div class="container">
-          <h1 class="h2">Welcome to Empower Ability Labs!</h1>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <h1 class="display-title">Welcome to Empower Ability Labs</h1>
+          <p class="lead">
+            We help communities create inclusive events, accessible programs,
+            and welcoming spaces for everyone.
+          </p>
+          <p>
+            <a href="#services" data-page="services" class="btn btn-primary btn-lg">Explore Our Services</a>
+          </p>
         </div>
       </div>
 
-      <div class="container">
-        <!-- Example row of columns -->
+      <div class="container section-spacing">
+        <h2 class="section-title">Upcoming Community Highlights</h2>
         <div class="row">
-          <div class="col-md-4">
-          
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p>
+          <div class="col-md-4 mb-4">
+            <article class="info-card">
+              <h3>Accessibility Workshop</h3>
+              <p>
+                Learn practical ways to make community events more inclusive
+                for people with different needs.
+              </p>
+
+              <!-- Person 3: Modal trigger -->
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                data-modal="modalWorkshop"
+              >
+                Learn more
+              </button>
+            </article>
           </div>
-          <div class="col-md-4">
-          
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p>
+
+          <div class="col-md-4 mb-4">
+            <article class="info-card">
+              <h3>Family Community Day</h3>
+              <p>
+                Join a fun event with family-friendly activities, local partners,
+                and accessible participation options.
+              </p>
+
+              <!-- Person 3: Modal trigger -->
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                data-modal="modalFamily"
+              >
+                Learn more
+              </button>
+            </article>
           </div>
-          <div class="col-md-4">
-          
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p>
+
+          <div class="col-md-4 mb-4">
+            <article class="info-card">
+              <h3>Volunteer Meetup</h3>
+              <p>
+                Meet volunteers, organizers, and community members who want to
+                support inclusive local events.
+              </p>
+
+              <!-- Person 3: Modal trigger -->
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                data-modal="modalVolunteer"
+              >
+                Learn more
+              </button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== -->
+    <!-- Person 2: Services -->
+    <!-- Person 3: Show/Hide -->
+    <!-- ===================== -->
+    <section id="services" tabindex="-1" class="page-section" hidden>
+      <div class="container section-spacing top-space">
+        <h1 class="display-title-sm">Our Services</h1>
+        <p class="intro-text">
+          We support organizations and community groups with event planning,
+          accessibility guidance, and engagement programs.
+        </p>
+
+        <div class="service-block">
+          <h2>Event Planning Support</h2>
+          <p>
+            We help teams build organized, user-friendly, and inclusive
+            community events.
+          </p>
+        </div>
+
+        <div class="service-block">
+          <h2>Accessibility Consulting</h2>
+          <p>
+            We review event experiences and recommend improvements for access,
+            usability, and participation.
+          </p>
+
+          <!-- Person 3: Show/Hide -->
+          <button
+            type="button"
+            class="btn btn-outline-secondary toggle-btn"
+            aria-expanded="false"
+            aria-controls="consultingDetails"
+          >
+            Show details
+          </button>
+
+          <div id="consultingDetails" class="details-panel" hidden>
+            <p>
+              This service can include communication review, accessible content
+              suggestions, and practical event accessibility improvements.
+            </p>
           </div>
         </div>
 
-        <hr>
+        <div class="service-block">
+          <h2>Volunteer Coordination</h2>
+          <p>
+            We connect people with meaningful ways to support community events.
+          </p>
 
-      </div> <!-- /container -->
+          <!-- Person 3: Show/Hide -->
+          <button
+            type="button"
+            class="btn btn-outline-secondary toggle-btn"
+            aria-expanded="false"
+            aria-controls="volunteerDetails"
+          >
+            Show details
+          </button>
 
-    </main>
+          <div id="volunteerDetails" class="details-panel" hidden>
+            <p>
+              Volunteer coordination includes outreach support, role planning,
+              and participant guidance for inclusive event delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer class="container">
-     <p>Copyright Accessible Knowledge Base 2023</p>
-    </footer>
+    <!-- ===================== -->
+    <!-- Person 4: Form -->
+    <!-- Person 3: Switch -->
+    <!-- ===================== -->
+    <section id="contact" tabindex="-1" class="page-section" hidden>
+      <div class="container section-spacing top-space">
+        <h1 class="display-title-sm">Schedule a Call</h1>
+        <p class="intro-text">
+          Tell us about your event or community needs, and we will contact you.
+        </p>
 
+        <form id="bookingForm" novalidate>
+          <div class="form-group">
+            <label for="businessName">Business / Organization Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="businessName"
+              name="businessName"
+            >
+          </div>
 
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phoneNumber"
+              name="phoneNumber"
+            >
+          </div>
 
-    <script src="EmpowerAbilityLab.js"></script>
-  
+          <div class="form-group">
+            <label for="email">
+              Email <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+              aria-describedby="emailHelp emailError"
+            >
+            <small id="emailHelp" class="form-text text-muted">
+              Required field.
+            </small>
+            <div id="emailError" class="error-message" aria-live="polite"></div>
+          </div>
 
-</body></html>
+          <fieldset class="form-group">
+            <legend>What would you like to talk about?</legend>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="topicPlanning"
+                name="topics"
+                value="planning"
+              >
+              <label class="form-check-label" for="topicPlanning">
+                Event planning support
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="topicAccessibility"
+                name="topics"
+                value="accessibility"
+              >
+              <label class="form-check-label" for="topicAccessibility">
+                Accessibility consulting
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="topicVolunteer"
+                name="topics"
+                value="volunteer"
+              >
+              <label class="form-check-label" for="topicVolunteer">
+                Volunteer coordination
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="eventDetails">Tell us about your event</label>
+            <textarea
+              class="form-control"
+              id="eventDetails"
+              name="eventDetails"
+              rows="5"
+            ></textarea>
+          </div>
+
+          <!-- Person 3: Switch -->
+          <div class="form-group">
+            <span id="updatesLabel" class="d-block mb-2">Receive updates about services and events</span>
+            <button
+              type="button"
+              id="emailUpdatesSwitch"
+              class="switch-btn"
+              role="switch"
+              aria-checked="false"
+              aria-labelledby="updatesLabel"
+            >
+              <span class="switch-text">Off</span>
+            </button>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Schedule a Call</button>
+
+          <!-- Person 4: Form message -->
+          <div id="formMessage" class="form-message mt-3" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== -->
+  <!-- Person 3: Modals -->
+  <!-- ===================== -->
+  <div id="modalOverlay" class="modal-overlay" hidden></div>
+
+  <div
+    id="modalWorkshop"
+    class="custom-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalWorkshopTitle"
+    aria-describedby="modalWorkshopDesc"
+    hidden
+  >
+    <div class="custom-modal-content">
+      <h2 id="modalWorkshopTitle">Accessibility Workshop</h2>
+      <p id="modalWorkshopDesc">
+        This workshop shares simple ways to improve accessibility in community
+        spaces, communication, and event planning.
+      </p>
+      <button type="button" class="btn btn-secondary close-modal-btn">Close</button>
+    </div>
+  </div>
+
+  <div
+    id="modalFamily"
+    class="custom-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalFamilyTitle"
+    aria-describedby="modalFamilyDesc"
+    hidden
+  >
+    <div class="custom-modal-content">
+      <h2 id="modalFamilyTitle">Family Community Day</h2>
+      <p id="modalFamilyDesc">
+        This event encourages family participation through inclusive activities,
+        community booths, and accessible event design.
+      </p>
+      <button type="button" class="btn btn-secondary close-modal-btn">Close</button>
+    </div>
+  </div>
+
+  <div
+    id="modalVolunteer"
+    class="custom-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalVolunteerTitle"
+    aria-describedby="modalVolunteerDesc"
+    hidden
+  >
+    <div class="custom-modal-content">
+      <h2 id="modalVolunteerTitle">Volunteer Meetup</h2>
+      <p id="modalVolunteerDesc">
+        Meet organizers and community members, learn about volunteer roles, and
+        explore ways to support local events.
+      </p>
+      <button type="button" class="btn btn-secondary close-modal-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- ===================== -->
+  <!-- Person 2: Footer -->
+  <!-- ===================== -->
+  <footer class="container footer-area">
+    <p>Copyright Empower Ability Labs 2026</p>
+  </footer>
+
+  <script src="EmpowerAbilityLab.js"></script>
+</body>
+</html>
