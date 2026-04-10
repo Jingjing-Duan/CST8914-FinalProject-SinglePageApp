@@ -11,7 +11,7 @@ function initSPA() {
 
   function getPageTitle(pageId) {
     const titles = {
-      home: 'Home - Empower Ability Labs',
+      home: 'Empower Ability Labs – Community Events & Booking',
       services: 'Services - Empower Ability Labs',
       contact: 'Schedule a Call - Empower Ability Labs'
     };
@@ -47,7 +47,8 @@ function initSPA() {
       history.pushState({ page: pageId }, '', `#${pageId}`);
     }
 
-    targetSection.focus();
+    window.scrollTo({ top: 0, behavior: "auto" });
+    targetSection.focus({ preventScroll: true });
 
     if (navWrapper && window.innerWidth < 768) {
       navWrapper.classList.remove('nav-open');
