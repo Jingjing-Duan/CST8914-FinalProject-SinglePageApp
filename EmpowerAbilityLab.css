@@ -313,3 +313,95 @@
     padding-bottom: 3rem;
   }
 }
+
+/* ======================================================
+   Youssuf: Modal + subscribe switch (minimal layout for
+   interactive components; aligns with course SPA spec.)
+   ====================================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1040;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.custom-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.custom-modal-content {
+  max-width: 32rem;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.custom-modal-content h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.switch-btn {
+  position: relative;
+  width: 4.5rem;
+  height: 1.75rem;
+  padding: 0 0.4rem 0 0;
+  border: 2px solid #6c757d;
+  border-radius: 999px;
+  background-color: #e9ecef;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.switch-btn:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Youssuf: visible On/Off label (JS updates .switch-text); knob is ::after. */
+.switch-btn .switch-text {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-left: 1.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #495057;
+  line-height: calc(1.75rem - 4px);
+  text-align: right;
+}
+
+.switch-btn::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.switch-btn.switch-on {
+  background-color: #0d6efd;
+  border-color: #0a58ca;
+}
+
+.switch-btn.switch-on .switch-text {
+  color: #ffffff;
+}
+
+.switch-btn.switch-on::after {
+  transform: translateX(2.15rem);
+}
