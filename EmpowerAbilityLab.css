@@ -2,6 +2,17 @@
    Person 2: layout / cards / content
    ====================================================== */
  
+/* --- Global Button Contrast Fix (Person 2) --- */
+.btn-primary {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+}
+ 
+.btn-primary:hover {
+  background-color: #004494 !important;
+  border-color: #004494 !important;
+}
+ 
 /* --- Hero Section --- */
 .hero-section .jumbotron {
   background: linear-gradient(135deg, #e8f0fe 0%, #f0f4ff 50%, #ffffff 100%);
