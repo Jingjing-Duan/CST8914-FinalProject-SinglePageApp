@@ -8,6 +8,9 @@ function initSPA() {
   const navLinks = document.querySelectorAll('.nav-link');
   const navToggleBtn = document.getElementById('navToggleBtn');
   const navWrapper = document.getElementById('primary-nav');
+  const skipLink = document.querySelector('.skip-link');
+  const mainContent = document.getElementById('main-content');
+  const validPages = ['home', 'services', 'contact'];
 
   function getPageTitle(pageId) {
     const titles = {
@@ -16,6 +19,22 @@ function initSPA() {
       contact: 'Schedule a Call - Empower Ability Labs'
     };
     return titles[pageId] || 'Empower Ability Labs';
+  }
+
+  if (skipLink) {
+    skipLink.addEventListener('click', event => {
+      event.preventDefault();
+
+      const activeSection = document.querySelector('.page-section:not([hidden])');
+
+      if (activeSection) {
+        activeSection.scrollIntoView({ behavior: 'auto', block: 'start' });
+        activeSection.focus();
+      } else if (mainContent) {
+        mainContent.scrollIntoView({ behavior: 'auto', block: 'start' });
+        mainContent.focus();
+      }
+    });
   }
 
   function updateCurrentNav(pageId) {
@@ -84,7 +103,13 @@ function initSPA() {
     });
   }
 
-  const initialPage = window.location.hash.replace('#', '') || 'home';
+  let initialPage = window.location.hash.replace('#', '') || 'home';
+
+  if (!validPages.includes(initialPage)) {
+    initialPage = 'home';
+  }
+
+  history.replaceState({ page: initialPage }, '', `#${initialPage}`);
   showPage(initialPage, false);
 }
 
