@@ -15,8 +15,8 @@
 }
 
 .skip-link:focus {
-  left: 20rem;
-  top: 1px;
+  left: 1rem;
+  top: 1rem;
 }
 
 /* ======================================================
@@ -24,6 +24,11 @@
    ====================================================== */
  
 /* --- Global Button Contrast Fix (Person 2) --- */
+
+html, body {
+  overflow-x: hidden;
+}
+
 .btn-primary {
   background-color: #0056b3 !important;
   border-color: #0056b3 !important;
@@ -236,6 +241,7 @@
   font-weight: 700;
   color: #1a1a2e;
   line-height: 1.2;
+
 }
  
 .display-title-sm {
@@ -246,6 +252,10 @@
   margin-bottom: 0.75rem;
 }
  
+.hero-section img {
+  margin-left: 80px;
+}
+
 /* --- Page Sections --- */
 .page-section {
   min-height: 70vh;
@@ -494,4 +504,14 @@
  
 .switch-btn.switch-on::after {
   transform: translateX(2.15rem);
+}
+
+
+@media (max-width: 768px) {
+  .custom-nav-list {
+    width: 100%;
+  }
+  .hero-section img {
+    margin-left: 0;
+  }
 }
