@@ -19,7 +19,7 @@
  
 .hero-section .lead {
   font-size: 1.15rem;
-  color: #2b2b2b;
+  color: #2b2b2b !important;
   max-width: 520px;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -93,7 +93,7 @@
 }
  
 .info-card p {
-  color: #3a3a3a;
+  color: #2b2b2b;
   line-height: 1.6;
   flex-grow: 1;
   margin-bottom: 1rem;
@@ -104,14 +104,14 @@
   border-radius: 6px;
   font-weight: 600;
   padding: 0.45rem 1.2rem;
-  color: #0a58ca;
-  border-color: #0a58ca;
+  color: #0a58ca !important;
+  border-color: #0a58ca !important;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
  
 .info-card .btn-outline-primary:hover {
   background-color: #0d6efd;
-  color: #ffffff;
+  color: #ffffff !important;
 }
  
 /* --- Services Page --- */
@@ -137,7 +137,7 @@
 }
  
 .service-block p {
-  color: #3a3a3a;
+  color: #2b2b2b;
   line-height: 1.6;
   margin-bottom: 0.75rem;
 }
@@ -161,7 +161,7 @@
  
 .details-panel p {
   margin-bottom: 0;
-  color: #3a3a3a;
+  color: #2b2b2b;
   line-height: 1.6;
 }
  
@@ -181,7 +181,7 @@
   max-width: 720px;
   margin-bottom: 2rem;
   font-size: 1.05rem;
-  color: #444444;
+  color: #2b2b2b;
   line-height: 1.65;
 }
  
@@ -229,7 +229,7 @@
   padding: 2rem 0;
   border-top: 2px solid #dee2e6;
   text-align: center;
-  color: #495057;
+  color: #2b2b2b;
   font-size: 0.9rem;
   background-color: #f8f9fa;
   margin-top: 3rem;
@@ -241,12 +241,12 @@
  
 /* --- Nav Contrast Fix (Person 2) --- */
 .custom-nav-list .nav-link {
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff !important;
 }
  
 .custom-nav-list .nav-link:hover,
 .custom-nav-list .nav-link:focus {
-  color: #ffffff;
+  color: #ffffff !important;
 }
  
 /* --- Form Messages (Person 2 contrast fix) --- */
