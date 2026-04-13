@@ -8,7 +8,6 @@
   <title>Home - Empower Ability Labs</title>
 
   <!-- Bootstrap CSS only -->
-  <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -67,7 +66,6 @@
       <div class="jumbotron hero-section">
         <div class="container">
           <div class="row align-items-center">
-              <!-- 左边文字 -->
               <div class="col-md-6">
                 <h1 class="display-title">Welcome to Empower Ability Labs</h1>
                 <p class="lead">
@@ -77,7 +75,6 @@
                   <a href="#services" data-page="services" class="btn btn-primary btn-lg">Explore Our Services</a>
                 </p>
               </div>
-              <!-- 右边图片 -->
               <div class="col-md-6">
                 <img 
                   src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac" 
@@ -101,7 +98,7 @@
                 for people with different needs.
               </p>
 
-              <!-- Youssuf: Modal trigger — aria-haspopup/aria-controls link opener to dialog (Final Project 2024.docx: interactive modal + SR support). -->
+              <!-- Youssuf: Modal trigger -->
               <button
                 type="button"
                 class="btn btn-outline-primary"
@@ -122,7 +119,7 @@
                 and accessible participation options.
               </p>
 
-              <!-- Youssuf: Modal trigger — aria-haspopup/aria-controls for dialog relationship. -->
+              <!-- Youssuf: Modal trigger -->
               <button
                 type="button"
                 class="btn btn-outline-primary"
@@ -143,7 +140,7 @@
                 support inclusive local events.
               </p>
 
-              <!-- Youssuf: Modal trigger — aria-haspopup/aria-controls for dialog relationship. -->
+              <!-- Youssuf: Modal trigger -->
               <button
                 type="button"
                 class="btn btn-outline-primary"
@@ -186,7 +183,7 @@
             usability, and participation.
           </p>
 
-          <!-- Youssuf: Show/Hide — stable id for region aria-labelledby (disclosure + SR). -->
+          <!-- Youssuf: Show/Hide -->
           <button
             type="button"
             id="toggleConsultingDetails"
@@ -217,7 +214,7 @@
             We connect people with meaningful ways to support community events.
           </p>
 
-          <!-- Youssuf: Show/Hide — stable id for region aria-labelledby. -->
+          <!-- Youssuf: Show/Hide -->
           <button
             type="button"
             id="toggleVolunteerDetails"
@@ -288,7 +285,7 @@
               required
               aria-describedby="emailHelp emailError"
             >
-            <small id="emailHelp" class="form-text text-muted">
+            <small id="emailHelp" class="form-text form-help-text">
               Required field.
             </small>
             <div id="emailError" class="error-message" aria-live="polite"></div>
@@ -372,7 +369,7 @@
   </main>
 
   <!-- ===================== -->
-  <!-- Youssuf: Modals — overlay is decorative; aria-hidden keeps it out of the accessibility tree while visible. -->
+  <!-- Youssuf: Modals -->
   <!-- ===================== -->
   <div
     id="modalOverlay"
@@ -396,7 +393,6 @@
         This workshop shares simple ways to improve accessibility in community
         spaces, communication, and event planning.
       </p>
-      <!-- Youssuf: explicit dismiss label for assistive tech. -->
       <button type="button" class="btn btn-secondary close-modal-btn" aria-label="Close dialog">Close</button>
     </div>
   </div>
