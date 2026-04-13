@@ -1,25 +1,4 @@
 /* ======================================================
-   Person 1: Skip link (accessibility)
-   ====================================================== */
-
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  background: #000;
-  color: #fff;
-  padding: 0.75rem 1rem;
-  z-index: 9999;
-  text-decoration: none;
-  border-radius: 0.25rem;
-}
-
-.skip-link:focus {
-  left: 20rem;
-  top: 1px;
-}
-
-/* ======================================================
    Person 2: layout / cards / content
    ====================================================== */
  
@@ -172,7 +151,14 @@
 .service-block .btn-outline-secondary {
   border-radius: 6px;
   font-weight: 600;
+  color: #495057 !important;
+  border-color: #495057 !important;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+ 
+.service-block .btn-outline-secondary:hover {
+  background-color: #495057;
+  color: #ffffff !important;
 }
  
 /* --- Show/Hide Details Panel --- */
