@@ -18,7 +18,6 @@
 }
  
 .hero-section .lead,
-.hero-section .jumbotron .lead,
 .jumbotron .lead,
 .jumbotron p.lead,
 .jumbotron p {
@@ -281,6 +280,12 @@
  
 .input-error {
   border: 2px solid #b00020;
+}
+ 
+/* --- Form Help Text (replaces text-muted for contrast) --- */
+.form-help-text {
+  color: #555555;
+  font-size: 80%;
 }
  
 /* ======================================================
