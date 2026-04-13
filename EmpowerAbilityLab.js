@@ -47,7 +47,7 @@ function initSPA() {
     });
   }
 
-  function showPage(pageId, shouldPushState = true) {
+  function showPage(pageId, shouldPushState = true, shouldFocus = true) {
     const targetSection = document.getElementById(pageId);
 
     if (!targetSection) {
@@ -67,7 +67,9 @@ function initSPA() {
     }
 
     window.scrollTo({ top: 0, behavior: "auto" });
-    targetSection.focus({ preventScroll: true });
+    if (shouldFocus) {
+      targetSection.focus({ preventScroll: true });
+}
 
     if (navWrapper && window.innerWidth < 768) {
       navWrapper.classList.remove('nav-open');
@@ -110,7 +112,7 @@ function initSPA() {
   }
 
   history.replaceState({ page: initialPage }, '', `#${initialPage}`);
-  showPage(initialPage, false);
+  showPage(initialPage, false, false);
 }
 
 // ======================================================
