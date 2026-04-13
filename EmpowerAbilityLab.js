@@ -21,11 +21,19 @@ function initSPA() {
     return titles[pageId] || 'Empower Ability Labs';
   }
 
-  if (skipLink && mainContent) {
+  if (skipLink) {
     skipLink.addEventListener('click', event => {
       event.preventDefault();
-      mainContent.focus();
-      window.scrollTo({ top: 0, behavior: 'auto' });
+
+      const activeSection = document.querySelector('.page-section:not([hidden])');
+
+      if (activeSection) {
+        activeSection.scrollIntoView({ behavior: 'auto', block: 'start' });
+        activeSection.focus();
+      } else if (mainContent) {
+        mainContent.scrollIntoView({ behavior: 'auto', block: 'start' });
+        mainContent.focus();
+      }
     });
   }
 
