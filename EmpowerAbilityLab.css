@@ -1,7 +1,7 @@
 /* ======================================================
    Person 2: layout / cards / content
    ====================================================== */
-
+ 
 /* --- Hero Section --- */
 .hero-section .jumbotron {
   background: linear-gradient(135deg, #e8f0fe 0%, #f0f4ff 50%, #ffffff 100%);
@@ -10,21 +10,21 @@
   padding-bottom: 3rem;
   margin-bottom: 0;
 }
-
+ 
 .hero-section .display-title {
   color: #1a1a2e;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
-
+ 
 .hero-section .lead {
   font-size: 1.15rem;
-  color: #444444;
+  color: #2b2b2b !important;
   max-width: 520px;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-
+ 
 .hero-section .btn-primary {
   padding: 0.7rem 1.8rem;
   font-size: 1rem;
@@ -32,12 +32,12 @@
   border-radius: 6px;
   transition: background-color 0.2s ease, transform 0.15s ease;
 }
-
+ 
 .hero-section .btn-primary:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(13, 110, 253, 0.35);
 }
-
+ 
 .hero-section img {
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
@@ -45,7 +45,7 @@
   max-height: 300px;
   object-fit: cover;
 }
-
+ 
 /* --- Section Headings --- */
 .section-title {
   margin-bottom: 1.5rem;
@@ -55,7 +55,7 @@
   position: relative;
   padding-bottom: 0.5rem;
 }
-
+ 
 .section-title::after {
   content: "";
   display: block;
@@ -65,7 +65,7 @@
   margin-top: 0.5rem;
   border-radius: 2px;
 }
-
+ 
 /* --- Event Info Cards --- */
 .info-card {
   height: 100%;
@@ -77,41 +77,43 @@
   display: flex;
   flex-direction: column;
 }
-
+ 
 .info-card:hover,
 .info-card:focus-within {
   box-shadow: 0 6px 20px rgba(13, 110, 253, 0.15);
   transform: translateY(-3px);
   border-color: #0d6efd;
 }
-
+ 
 .info-card h3 {
   font-size: 1.25rem;
   font-weight: 700;
   color: #1a1a2e;
   margin-bottom: 0.75rem;
 }
-
+ 
 .info-card p {
-  color: #4a4a4a;
+  color: #2b2b2b;
   line-height: 1.6;
   flex-grow: 1;
   margin-bottom: 1rem;
 }
-
+ 
 .info-card .btn-outline-primary {
   align-self: flex-start;
   border-radius: 6px;
   font-weight: 600;
   padding: 0.45rem 1.2rem;
+  color: #0a58ca !important;
+  border-color: #0a58ca !important;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-
+ 
 .info-card .btn-outline-primary:hover {
   background-color: #0d6efd;
-  color: #ffffff;
+  color: #ffffff !important;
 }
-
+ 
 /* --- Services Page --- */
 .service-block {
   margin-bottom: 2rem;
@@ -121,31 +123,31 @@
   border-radius: 0 8px 8px 0;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
-
+ 
 .service-block:hover {
   background-color: #eef3ff;
   box-shadow: 0 2px 10px rgba(13, 110, 253, 0.08);
 }
-
+ 
 .service-block h2 {
   font-size: 1.3rem;
   font-weight: 700;
   color: #1a1a2e;
   margin-bottom: 0.5rem;
 }
-
+ 
 .service-block p {
-  color: #4a4a4a;
+  color: #2b2b2b;
   line-height: 1.6;
   margin-bottom: 0.75rem;
 }
-
+ 
 .service-block .btn-outline-secondary {
   border-radius: 6px;
   font-weight: 600;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-
+ 
 /* --- Show/Hide Details Panel --- */
 .details-panel {
   margin-top: 1rem;
@@ -156,13 +158,13 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   animation: fadeSlideIn 0.3s ease;
 }
-
+ 
 .details-panel p {
   margin-bottom: 0;
-  color: #4a4a4a;
+  color: #2b2b2b;
   line-height: 1.6;
 }
-
+ 
 @keyframes fadeSlideIn {
   from {
     opacity: 0;
@@ -173,16 +175,16 @@
     transform: translateY(0);
   }
 }
-
+ 
 /* --- Intro Text --- */
 .intro-text {
   max-width: 720px;
   margin-bottom: 2rem;
   font-size: 1.05rem;
-  color: #555555;
+  color: #2b2b2b;
   line-height: 1.65;
 }
-
+ 
 /* --- Display Titles --- */
 .display-title {
   font-size: 2.2rem;
@@ -190,7 +192,7 @@
   color: #1a1a2e;
   line-height: 1.2;
 }
-
+ 
 .display-title-sm {
   font-size: 2rem;
   font-weight: 700;
@@ -198,135 +200,247 @@
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
-
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  background: #000;
-  color: #fff;
-  padding: 0.75rem 1rem;
-  z-index: 9999;
-  text-decoration: none;
-  border-radius: 0.25rem;
-}
-
-.skip-link:focus {
-  left: 20rem;
-  top: 1rem;
-}
-
+ 
 /* --- Page Sections --- */
 .page-section {
   min-height: 70vh;
 }
-
+ 
 .section-spacing {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-
+ 
 .top-space {
   margin-top: 2rem;
 }
-
+ 
 /* --- Card Row Spacing --- */
 .info-card-row {
   margin-bottom: 2rem;
 }
-
+ 
 .info-card-row .col-md-4 {
   display: flex;
 }
-
+ 
 /* --- Footer --- */
 .footer-area {
   padding: 2rem 0;
   border-top: 2px solid #dee2e6;
   text-align: center;
-  color: #6c757d;
+  color: #2b2b2b;
   font-size: 0.9rem;
   background-color: #f8f9fa;
   margin-top: 3rem;
 }
-
+ 
 .footer-area p {
   margin-bottom: 0;
 }
-
+ 
+/* --- Nav Contrast Fix (Person 2) --- */
+.custom-nav-list .nav-link {
+  color: #ffffff !important;
+}
+ 
+.custom-nav-list .nav-link:hover,
+.custom-nav-list .nav-link:focus {
+  color: #ffffff !important;
+}
+ 
+/* --- Form Messages (Person 2 contrast fix) --- */
+.required-mark {
+  color: #b00020;
+}
+ 
+.error-message {
+  color: #b00020;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+ 
+.form-message {
+  font-weight: 600;
+}
+ 
+.message-success {
+  color: #0b6b2a;
+}
+ 
+.message-error {
+  color: #b00020;
+}
+ 
+.input-error {
+  border: 2px solid #b00020;
+}
+ 
 /* ======================================================
    Person 2: Responsive adjustments
    ====================================================== */
-
+ 
 @media (max-width: 767.98px) {
   .display-title {
     font-size: 1.8rem;
   }
-
+ 
   .display-title-sm {
     font-size: 1.65rem;
   }
-
+ 
   .hero-section .jumbotron {
     padding-top: 2rem;
     padding-bottom: 2rem;
     text-align: center;
   }
-
+ 
   .hero-section .lead {
     max-width: 100%;
   }
-
+ 
   .hero-section img {
     margin-top: 1.5rem;
     max-height: 220px;
   }
-
+ 
   .hero-section .btn-primary {
     width: 100%;
   }
-
+ 
   .info-card {
     margin-bottom: 1rem;
   }
-
+ 
   .service-block {
     padding: 1rem;
   }
-
+ 
   .section-title {
     font-size: 1.4rem;
   }
-
+ 
   .section-spacing {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
-
+ 
   .footer-area {
     margin-top: 2rem;
     padding: 1.5rem 0;
   }
 }
-
+ 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .display-title {
     font-size: 2rem;
   }
-
+ 
   .hero-section img {
     max-height: 260px;
   }
 }
-
+ 
 @media (min-width: 992px) {
   .hero-section .jumbotron {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
-
+ 
   .section-spacing {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+}
+ 
+/* ======================================================
+   Youssuf: Modal + subscribe switch (minimal layout for
+   interactive components; aligns with course SPA spec.)
+   ====================================================== */
+ 
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1040;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+ 
+.custom-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+ 
+.custom-modal-content {
+  max-width: 32rem;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+ 
+.custom-modal-content h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+ 
+.switch-btn {
+  position: relative;
+  width: 4.5rem;
+  height: 1.75rem;
+  padding: 0 0.4rem 0 0;
+  border: 2px solid #6c757d;
+  border-radius: 999px;
+  background-color: #e9ecef;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+ 
+.switch-btn:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+ 
+/* Youssuf: visible On/Off label (JS updates .switch-text); knob is ::after. */
+.switch-btn .switch-text {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-left: 1.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #495057;
+  line-height: calc(1.75rem - 4px);
+  text-align: right;
+}
+ 
+.switch-btn::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+ 
+.switch-btn.switch-on {
+  background-color: #0d6efd;
+  border-color: #0a58ca;
+}
+ 
+.switch-btn.switch-on .switch-text {
+  color: #ffffff;
+}
+ 
+.switch-btn.switch-on::after {
+  transform: translateX(2.15rem);
 }

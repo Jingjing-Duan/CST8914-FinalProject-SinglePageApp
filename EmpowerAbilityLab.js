@@ -114,7 +114,8 @@ function initSPA() {
 }
 
 // ======================================================
-// Person 3: Show / Hide details
+// Youssuf: Show / Hide details
+// (HTML supplies aria-expanded / aria-controls / role="region" on panels.)
 // ======================================================
 
 function initShowHide() {
@@ -138,7 +139,7 @@ function initShowHide() {
 }
 
 // ======================================================
-// Person 3: Switch
+// Youssuf: Switch (role="switch", aria-checked, aria-labelledby in HTML)
 // ======================================================
 
 function initSwitch() {
@@ -173,7 +174,7 @@ function initSwitch() {
 }
 
 // ======================================================
-// Person 3: Modal
+// Youssuf: Modal — open/close, Escape, focus return, Tab focus trap inside dialog
 // ======================================================
 
 function initModal() {
@@ -182,6 +183,15 @@ function initModal() {
   const overlay = document.getElementById('modalOverlay');
   let activeModal = null;
   let lastFocusedElement = null;
+
+  function getFocusableElements(modal) {
+    if (!modal) {
+      return [];
+    }
+    const selector =
+      'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    return Array.from(modal.querySelectorAll(selector));
+  }
 
   function openModal(modal) {
     if (!modal) {
@@ -214,7 +224,7 @@ function initModal() {
       overlay.hidden = true;
     }
 
-    if (lastFocusedElement) {
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
       lastFocusedElement.focus();
     }
 
@@ -238,8 +248,35 @@ function initModal() {
   }
 
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && activeModal) {
+    if (!activeModal) {
+      return;
+    }
+
+    if (event.key === 'Escape') {
       closeModal();
+      return;
+    }
+
+    if (event.key !== 'Tab') {
+      return;
+    }
+
+    const focusables = getFocusableElements(activeModal);
+    if (focusables.length === 0) {
+      return;
+    }
+
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+
+    if (event.shiftKey) {
+      if (document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      }
+    } else if (document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
     }
   });
 }
@@ -314,9 +351,9 @@ function initForm() {
 
 function knowledgeRunner() {
   initSPA();        // Person 1
-  initShowHide();   // Person 3
-  initSwitch();     // Person 3
-  initModal();      // Person 3
+  initShowHide();   // Youssuf
+  initSwitch();     // Youssuf
+  initModal();      // Youssuf
   initForm();       // Person 4
 }
 

@@ -101,11 +101,13 @@
                 for people with different needs.
               </p>
 
-              <!-- Person 3: Modal trigger -->
+              <!-- Youssuf: Modal trigger — aria-haspopup/aria-controls link opener to dialog (Final Project 2024.docx: interactive modal + SR support). -->
               <button
                 type="button"
                 class="btn btn-outline-primary"
                 data-modal="modalWorkshop"
+                aria-haspopup="dialog"
+                aria-controls="modalWorkshop"
               >
                 Learn more
               </button>
@@ -120,11 +122,13 @@
                 and accessible participation options.
               </p>
 
-              <!-- Person 3: Modal trigger -->
+              <!-- Youssuf: Modal trigger — aria-haspopup/aria-controls for dialog relationship. -->
               <button
                 type="button"
                 class="btn btn-outline-primary"
                 data-modal="modalFamily"
+                aria-haspopup="dialog"
+                aria-controls="modalFamily"
               >
                 Learn more
               </button>
@@ -139,11 +143,13 @@
                 support inclusive local events.
               </p>
 
-              <!-- Person 3: Modal trigger -->
+              <!-- Youssuf: Modal trigger — aria-haspopup/aria-controls for dialog relationship. -->
               <button
                 type="button"
                 class="btn btn-outline-primary"
                 data-modal="modalVolunteer"
+                aria-haspopup="dialog"
+                aria-controls="modalVolunteer"
               >
                 Learn more
               </button>
@@ -155,7 +161,7 @@
 
     <!-- ===================== -->
     <!-- Person 2: Services -->
-    <!-- Person 3: Show/Hide -->
+    <!-- Youssuf: Show/Hide -->
     <!-- ===================== -->
     <section id="services" tabindex="-1" class="page-section" hidden>
       <div class="container section-spacing top-space">
@@ -180,9 +186,10 @@
             usability, and participation.
           </p>
 
-          <!-- Person 3: Show/Hide -->
+          <!-- Youssuf: Show/Hide — stable id for region aria-labelledby (disclosure + SR). -->
           <button
             type="button"
+            id="toggleConsultingDetails"
             class="btn btn-outline-secondary toggle-btn"
             aria-expanded="false"
             aria-controls="consultingDetails"
@@ -190,7 +197,13 @@
             Show details
           </button>
 
-          <div id="consultingDetails" class="details-panel" hidden>
+          <div
+            id="consultingDetails"
+            class="details-panel"
+            role="region"
+            aria-labelledby="toggleConsultingDetails"
+            hidden
+          >
             <p>
               This service can include communication review, accessible content
               suggestions, and practical event accessibility improvements.
@@ -204,9 +217,10 @@
             We connect people with meaningful ways to support community events.
           </p>
 
-          <!-- Person 3: Show/Hide -->
+          <!-- Youssuf: Show/Hide — stable id for region aria-labelledby. -->
           <button
             type="button"
+            id="toggleVolunteerDetails"
             class="btn btn-outline-secondary toggle-btn"
             aria-expanded="false"
             aria-controls="volunteerDetails"
@@ -214,7 +228,13 @@
             Show details
           </button>
 
-          <div id="volunteerDetails" class="details-panel" hidden>
+          <div
+            id="volunteerDetails"
+            class="details-panel"
+            role="region"
+            aria-labelledby="toggleVolunteerDetails"
+            hidden
+          >
             <p>
               Volunteer coordination includes outreach support, role planning,
               and participant guidance for inclusive event delivery.
@@ -226,7 +246,7 @@
 
     <!-- ===================== -->
     <!-- Person 4: Form -->
-    <!-- Person 3: Switch -->
+    <!-- Youssuf: Switch -->
     <!-- ===================== -->
     <section id="contact" tabindex="-1" class="page-section" hidden>
       <div class="container section-spacing top-space">
@@ -327,7 +347,7 @@
             ></textarea>
           </div>
 
-          <!-- Person 3: Switch -->
+          <!-- Youssuf: Switch -->
           <div class="form-group">
             <span id="updatesLabel" class="d-block mb-2">Receive updates about services and events</span>
             <button
@@ -352,9 +372,14 @@
   </main>
 
   <!-- ===================== -->
-  <!-- Person 3: Modals -->
+  <!-- Youssuf: Modals — overlay is decorative; aria-hidden keeps it out of the accessibility tree while visible. -->
   <!-- ===================== -->
-  <div id="modalOverlay" class="modal-overlay" hidden></div>
+  <div
+    id="modalOverlay"
+    class="modal-overlay"
+    hidden
+    aria-hidden="true"
+  ></div>
 
   <div
     id="modalWorkshop"
@@ -371,7 +396,8 @@
         This workshop shares simple ways to improve accessibility in community
         spaces, communication, and event planning.
       </p>
-      <button type="button" class="btn btn-secondary close-modal-btn">Close</button>
+      <!-- Youssuf: explicit dismiss label for assistive tech. -->
+      <button type="button" class="btn btn-secondary close-modal-btn" aria-label="Close dialog">Close</button>
     </div>
   </div>
 
@@ -390,7 +416,7 @@
         This event encourages family participation through inclusive activities,
         community booths, and accessible event design.
       </p>
-      <button type="button" class="btn btn-secondary close-modal-btn">Close</button>
+      <button type="button" class="btn btn-secondary close-modal-btn" aria-label="Close dialog">Close</button>
     </div>
   </div>
 
@@ -409,7 +435,7 @@
         Meet organizers and community members, learn about volunteer roles, and
         explore ways to support local events.
       </p>
-      <button type="button" class="btn btn-secondary close-modal-btn">Close</button>
+      <button type="button" class="btn btn-secondary close-modal-btn" aria-label="Close dialog">Close</button>
     </div>
   </div>
 
